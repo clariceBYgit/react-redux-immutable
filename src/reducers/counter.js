@@ -16,7 +16,7 @@ export default ( state = initState, action) => {
         //  操作四：修改获取数值的方式
            return state.updateIn(['count'], v => v + 1)
         case 'DECREMENT':
-            return state.updateIn(['count'], v => v - 1)
+            return state.update('count', v => v - 1)
         default:
             return state
     }
